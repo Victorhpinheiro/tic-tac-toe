@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- import google fonts noto sams -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <header>
+        <h1> Tic Tac Toe</h1>
+    </header>
+    
+    <main>
+        <div id="turn">
+            X turn
+        </div>
+
+        <div id ="container">
+
+            <div class='line'>
+                <div id="0" class="square">0</div>
+                <div id="1" class="square">1</div>
+                <div id="2" class="square">2</div>
+            </div>
+
+            <div class='line'>
+                <div id="3" class="square">3</div>
+                <div id="4" class="square">4</div>
+                <div id="5" class="square">5</div>
+            </div>
+
+            <div class='line'>
+                <div id="6" class="square">6</div>
+                <div id="7" class="square">7</div>
+                <div id="8" class="square">8</div>
+            </div>
+        </div>
+
+        <div id='winner' display="nome">
+            Vencedor
+        </div>
+        <button id="btn-reset">Reset</button>
+    
+    </main>
+
+    <footer>
+        Created by <a href="https://github.com/victorhpinheiro">Victor Honorato Pinheiro</a>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

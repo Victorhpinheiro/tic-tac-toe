@@ -1,0 +1,90 @@
+/* ROOT ==================================================== */
+*{
+    --aquamarine: #5DFDCB;
+    --maya-blue: #7CC6FE;
+    --alice-blue: #F4FAFF;
+    --blue-bell: #8789C0;
+    --rich-black: #08090A;
+
+    /* google fonts noto sans*/
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+
+/* BODY ==================================================== */
+body{
+    background-color:var(--maya-blue);
+    
+    /*Centrazlize the page */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+
+}
+
+/* HEADER ==================================================== */
+h1{
+    text-align: center;
+    color: var(--alice-blue);
+}
+
+
+
+
+
+/* MAIN ==================================================== */
+
+
+.line{
+    display: flex;
+    flex-direction: row; /*default is column*/
+    justify-content: center; /*flex is only responsive to content and flex att*/
+}
+
+.square{
+    /* learned how to use on flexfroggy*/
+    display: inline;
+    
+}
+
+
+
+#winner{
+    display: none;
+}
+
+
+
+
+/* FOOTER ==================================================== */
+
+
+
+
+
+
+/* BUTTON ==================================================== */
+
+
+
+
+/* RESPONSIVE ==================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
