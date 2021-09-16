@@ -3,6 +3,7 @@
 This was my first attempt to create an application only front-end with CSS-HTML-Pure Javascript
 
 The logic is solid and the game run without any mistakes! check it out.
+
 ---
 # Screenshots
 
@@ -17,6 +18,7 @@ O wins
 
 Draws
 ![draws](Screenshots/tic)
+
 ---
 # Things to improve
 
