@@ -1,83 +1,119 @@
-/* ROOT ==================================================== */
+/* ROOT ============================================================================= */
 *{
-    --aquamarine: #5DFDCB;
-    --maya-blue: #7CC6FE;
-    --alice-blue: #F4FAFF;
-    --blue-bell: #8789C0;
-    --rich-black: #08090A;
+    --charcoal: #274156;
+    --blue-saphire: #1C6E8C;
+    --davys-grey: #605856;
+    --turquese-blue: #59F8E8;
+    --light-gray: #D0CCD0;
 
     /* google fonts noto sans*/
     font-family: 'Noto Sans', sans-serif;
-
 }
 
-
-/* BODY ==================================================== */
+/* BODY ============================================================================= */
 body{
-    background-color:var(--maya-blue);
+    background-color:var(--light-gray);
     
     /*Centrazlize the page */
     position: absolute;
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%);
-
-
-
+    transform: translate(-50%, -50%); /* pass the point to the game  */
 }
 
-/* HEADER ==================================================== */
+/* HEADER ============================================================================= */
 h1{
     text-align: center;
-    color: var(--alice-blue);
+    font-size: 500%;
 }
 
-
-
-
-
-/* MAIN ==================================================== */
-
+/* MAIN ============================================================================= */
+main{
+    text-align: center;
+}
 
 .line{
     display: flex;
     flex-direction: row; /*default is column*/
     justify-content: center; /*flex is only responsive to content and flex att*/
-}
-
+}   
 .square{
     /* learned how to use on flexfroggy*/
-    display: inline;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid;
+    border-collapse:collapse ;
+
+    width: 20vw;
+    height: 20vh;  
 }
-
-
+#turn{
+    margin-bottom: 5%;
+}
 
 #winner{
     display: none;
+    color: var(--blue-saphire);
+    font-size: 800%;
 }
 
 
+/* FOOTER ============================================================================= */
+footer{
+    margin-top: 10%;
+    text-align: center;
+}
 
+#profile{
+    text-decoration: none;
+    color:black;
+}
 
-/* FOOTER ==================================================== */
+/* BUTTON ============================================================================= */
+button{
+    margin-top: 5%; /* image border different than paddling */
+    color: white;
+    font-size: 30px;
+    background-color: var(--charcoal);
+    width: 40%;
+    height: 30%;
+    border-radius: 10px;
+    border-style: solid;
+}
 
+/* RESPONSIVE ============================================================================= */
+button:hover{
+    background-color: var(--blue-saphire);
+    cursor: pointer;
+    border-style: solid;
+}
 
+#profile:hover{
+    color:var(--blue-saphire);
+}
 
+.x::after{
+    background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Letter_x.svg/1200px-Letter_x.svg.png');
+    background-size: 80px 160px;
+    width: 80px;
+    height: 160px;
+    display:inline-block;
+    content:"";
+}
 
-
-
-/* BUTTON ==================================================== */
-
-
-
-
-/* RESPONSIVE ==================================================== */
-
-
-
-
+.o::after{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/LetterO.svg/1200px-LetterO.svg.png');
+    background-size: 80px 120px;
+    width: 80px;
+    height: 120px;
+    display:inline-block;
+    content:"";
+    /* change the point of reference */
+    transform: translate(-5%, 10%);
+}
 
 
 
