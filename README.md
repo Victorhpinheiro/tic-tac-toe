@@ -4,7 +4,6 @@ This was my first attempt to create an application only front-end with CSS-HTML-
 
 The logic is solid and the game run without any mistakes! check it out.
 
----
 # Screenshots
 
 Clean board
@@ -17,9 +16,8 @@ O wins
 ![O wins](Screenshots/tic-tac-toe-3.PNG)
 
 Draws
-![draws](Screenshots/tic)
+![draws](Screenshots/tic-tac-toe-4.PNG)
 
----
 # Things to improve
 
 - Game not totatlly responsive in the height direction
