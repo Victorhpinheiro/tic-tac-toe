@@ -47,22 +47,23 @@ function game(sqr) {
 //after each turn it will check the state of the game
 function winGame() {
     let full = []
-    let size = square.lenght
+    let size = square.length
 
     for (let i = 0; i < size; i++) {
         full[i] = square[i].classList[1];
     }
-
+    console.log(size)
+    console.log(full)
 
     //check X won
     if (full[0] == "x" && full[1] == "x" && full[2] == "x" ||
         full[3] == "x" && full[4] == "x" && full[5] == "x" ||
         full[6] == "x" && full[7] == "x" && full[8] == "x" ||
-        square[0].className == "square x" && square[1].className == "square x" && square[2].className == "square x" ||
-        square[3].className == "square x" && square[4].className == "square x" && square[5].className == "square x" ||
-        square[6].className == "square x" && square[7].className == "square x" && square[8].className == "square x" ||
-        square[0].className == "square x" && square[4].className == "square x" && square[8].className == "square x" ||
-        square[2].className == "square x" && square[4].className == "square x" && square[6].className == "square x"
+        full[0] == "x" && full[3] == "x" && full[6] == "x" ||
+        full[1] == "x" && full[4] == "x" && full[7] == "x" ||
+        full[2] == "x" && full[5] == "x" && full[8] == "x" ||
+        full[0] == "x" && full[4] == "x" && full[8] == "x" ||
+        full[2] == "x" && full[4] == "x" && full[6] == "x"
     ) {
         won = true;
         winner.style.display = "block";
@@ -71,14 +72,14 @@ function winGame() {
     }
 
     // Check O won
-    if (square[0].className == "square o" && square[3].className == "square o" && square[6].className == "square o" ||
-        square[1].className == "square o" && square[4].className == "square o" && square[7].className == "square o" ||
-        square[2].className == "square o" && square[5].className == "square o" && square[8].className == "square o" ||
-        square[0].className == "square o" && square[1].className == "square o" && square[2].className == "square o" ||
-        square[3].className == "square o" && square[4].className == "square o" && square[5].className == "square o" ||
-        square[6].className == "square o" && square[7].className == "square o" && square[8].className == "square o" ||
-        square[0].className == "square o" && square[4].className == "square o" && square[8].className == "square o" ||
-        square[2].className == "square o" && square[4].className == "square o" && square[6].className == "square o"
+    if (full[0] == "o" && full[1] == "o" && full[2] == "o" ||
+        full[3] == "o" && full[4] == "o" && full[5] == "o" ||
+        full[6] == "o" && full[7] == "o" && full[8] == "o" ||
+        full[0] == "o" && full[3] == "o" && full[6] == "o" ||
+        full[1] == "o" && full[4] == "o" && full[7] == "o" ||
+        full[2] == "o" && full[5] == "o" && full[8] == "o" ||
+        full[0] == "o" && full[4] == "o" && full[8] == "o" ||
+        full[2] == "o" && full[4] == "o" && full[6] == "o"
     ) {
         won = true;
         winner.style.display = "block";
@@ -88,13 +89,9 @@ function winGame() {
 
     //check if board is full and its a draw
     else if (won == false) {
-        let full = []
-        let size = square.lenght
+
         // feels weird have to interate everytime someone clicks, maybe we store before and update just the clicked?
         //TODO Better
-        for (let i = 0; i < size; i++) {
-            full[i] = square[i].classList[1];
-        }
         if (full.includes(undefined)) {
             return;
         }
