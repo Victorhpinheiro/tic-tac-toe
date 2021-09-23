@@ -46,10 +46,18 @@ function game(sqr) {
 
 //after each turn it will check the state of the game
 function winGame() {
+    let full = []
+    let size = square.lenght
+
+    for (let i = 0; i < size; i++) {
+        full[i] = square[i].classList[1];
+    }
+
+
     //check X won
-    if (square[0].className == "square x" && square[3].className == "square x" && square[6].className == "square x" ||
-        square[1].className == "square x" && square[4].className == "square x" && square[7].className == "square x" ||
-        square[2].className == "square x" && square[5].className == "square x" && square[8].className == "square x" ||
+    if (full[0] == "x" && full[1] == "x" && full[2] == "x" ||
+        full[3] == "x" && full[4] == "x" && full[5] == "x" ||
+        full[6] == "x" && full[7] == "x" && full[8] == "x" ||
         square[0].className == "square x" && square[1].className == "square x" && square[2].className == "square x" ||
         square[3].className == "square x" && square[4].className == "square x" && square[5].className == "square x" ||
         square[6].className == "square x" && square[7].className == "square x" && square[8].className == "square x" ||
@@ -80,10 +88,11 @@ function winGame() {
 
     //check if board is full and its a draw
     else if (won == false) {
-        var full = []
+        let full = []
+        let size = square.lenght
         // feels weird have to interate everytime someone clicks, maybe we store before and update just the clicked?
         //TODO Better
-        for (let i = 0; i < square.length; i++) {
+        for (let i = 0; i < size; i++) {
             full[i] = square[i].classList[1];
         }
         if (full.includes(undefined)) {
