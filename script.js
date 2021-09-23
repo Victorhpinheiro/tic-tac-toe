@@ -52,8 +52,6 @@ function winGame() {
     for (let i = 0; i < size; i++) {
         full[i] = square[i].classList[1];
     }
-    console.log(size)
-    console.log(full)
 
     //check X won
     if (full[0] == "x" && full[1] == "x" && full[2] == "x" ||
@@ -89,9 +87,6 @@ function winGame() {
 
     //check if board is full and its a draw
     else if (won == false) {
-
-        // feels weird have to interate everytime someone clicks, maybe we store before and update just the clicked?
-        //TODO Better
         if (full.includes(undefined)) {
             return;
         }
@@ -120,4 +115,3 @@ function resetGame() {
 
 }
 
-console.log(square[0].classList)

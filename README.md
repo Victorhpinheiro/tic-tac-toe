@@ -21,4 +21,3 @@ Draws
 # Things to improve
 
 - Game not totatlly responsive in the height direction
-- The logic to check the winner can be improved, not the best design
