@@ -19,13 +19,9 @@ function game(sqr) {
     let classSquare = sqr.target.classList;
 
     //it was clicked already
-    if (classSquare.length >= 2) {
-        return;
-    }
+    if (classSquare.length >= 2) return;
     //stop game if won
-    else if (won == true) {
-        return;
-    }
+    else if (won) return;
     //play
     else {
         //Add X on even turns
@@ -46,8 +42,8 @@ function game(sqr) {
 
 //after each turn it will check the state of the game
 function winGame() {
-    let full = []
-    let size = square.length
+    let full = [];
+    let size = square.length;
 
     for (let i = 0; i < size; i++) {
         full[i] = square[i].classList[1];

@@ -13,19 +13,15 @@
 /* BODY ============================================================================= */
 body{
     background-color:var(--light-gray);
+    position: flex;
+    flex-direction: row;
     
-    /*Centrazlize the page */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%); /* pass the point to the game  */
 }
 
 /* HEADER ============================================================================= */
 h1{
     text-align: center;
-    font-size: 500%;
+    font-size: 60px;
 }
 
 /* MAIN ============================================================================= */
@@ -39,31 +35,43 @@ main{
     justify-content: center; /*flex is only responsive to content and flex att*/
 }   
 .square{
-    /* learned how to use on flexfroggy*/
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor:pointer;
 
     border: 2px solid;
     border-collapse:collapse ;
 
-    width: 20vw;
-    height: 20vh;  
+    width: 300px;
+    height: 300px;
 }
 #turn{
-    margin-bottom: 5%;
+    margin-bottom: 20px;
 }
 
 #winner{
     display: none;
     color: var(--blue-saphire);
-    font-size: 800%;
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.x{
+    cursor: initial;
+}
+.o{
+    cursor: initial;
+}
+
+#container{
+    margin-bottom: 40px;
 }
 
 
 /* FOOTER ============================================================================= */
 footer{
-    margin-top: 10%;
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -74,12 +82,10 @@ footer{
 
 /* BUTTON ============================================================================= */
 button{
-    margin-top: 5%; /* image border different than paddling */
     color: white;
     font-size: 30px;
     background-color: var(--charcoal);
-    width: 40%;
-    height: 30%;
+    width: 200px;
     border-radius: 10px;
     border-style: solid;
 }
@@ -96,15 +102,18 @@ button:hover{
 }
 
 .x::after{
+    cursor:initial;
     background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Letter_x.svg/1200px-Letter_x.svg.png');
     background-size: 80px 160px;
     width: 80px;
     height: 160px;
     display:inline-block;
     content:"";
+    
 }
 
 .o::after{
+    cursor:initial;
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/LetterO.svg/1200px-LetterO.svg.png');
     background-size: 80px 120px;
     width: 80px;
@@ -113,9 +122,14 @@ button:hover{
     content:"";
     /* change the point of reference */
     transform: translate(-5%, 10%);
+    
 }
 
-
+@media screen and (max-width: 765px){
+    .square{
+        height: 150px;
+    }
+}
 
 
 
